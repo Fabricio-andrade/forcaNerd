@@ -6,16 +6,22 @@ async function listaPalavras() {
 
 listaPalavras().then(lista => {
     const tamanho = Object.keys(lista.lista).length;
-    const campo = document.getElementById('palavra')
-    console.log(lista.lista[0]);
+    const campo = document.getElementById('palavra');
+    let letra = document.getElementById('letra').value;
+    let vidas = 5;
 
     function randomSort(a, b) {
         return Math.random() - 0.5;
     }
+
     document.getElementById('gerar').onclick = () => {
         
         lista.lista.sort(randomSort);
-        campo.innerHTML = lista.lista[0].palavra;
+        let palavraNova = lista.lista[0].palavra;
+        console.log(palavraNova.length);
+    }
 
+    document.getElementById('confirma').onclick = () => {
+        
     }
 })
