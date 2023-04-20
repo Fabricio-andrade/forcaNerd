@@ -1,5 +1,24 @@
 {
-    "nomes": {
-        
-    }
+    "lista": [
+        {
+            "id": 0,
+            "palavra": "Espada"
+        },
+        {
+            "id": 1,
+            "palavra": "Carro"
+        },
+        {
+            "id": 2,
+            "palavra": "Livro"
+        },
+        {
+            "id": 3,
+            "palavra": "Tomada"
+        },
+        {
+            "id": 4,
+            "palavra": "Arvore"
+        }
+    ]
 }
