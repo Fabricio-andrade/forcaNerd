@@ -84,3 +84,7 @@ function avisoRepetida() {
 function isLetra(codigo) {
     return codigo >= 65 && codigo <= 90;
 }
+
+function reiniciar() {
+    window.location.reload();
+}
