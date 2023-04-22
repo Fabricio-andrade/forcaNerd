@@ -27,3 +27,7 @@ function atualizarJogo() {
     vidas();
     checagem();
 }
+
+function isLetra(codigo) {
+    return codigo >= 65 && codigo <= 90;
+}
