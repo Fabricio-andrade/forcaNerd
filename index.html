@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="gerar">Gerar palavra</button>
-    <div class="forca" id="forca"></div>
-    <div id="palavra"></div>
+    <h1>Jogo da Forca</h1>
+    <h2>Digite uma letra para começar</h2>
+    <div class="Jogo">
+        <div class="forca">
+            <h3>Vidas:</h3>
+            <h4 class="vidas">♥</h4>
+            <h4 class="vidas">♥</h4>
+            <h4 class="vidas">♥</h4>
+            <h4 class="vidas">♥</h4>
+            <h4 class="vidas">♥</h4>
+        </div>
+        <div class="erradasContainer"><h3>Letras Erradas</h3></div>
+    </div>
     <br>
-    <input type="text" maxlength="1" placeholder="Digite uma letra" id="letra">
-    <button id="confirma">Confirmar</button>
-    <input type="text" placeholder="Adivinhar palavra">
-    <button id="Adivinhar">Adivinhar</button>
+    <div class="secretaContainer"></div>
+    <div class="avisoRepetida"><h3>Você já usou esta letra</h3></div>
+    <div class="popupContainer">
+        <div class="popup">
+            <h2 id="mensagem"></h2>
+            <button id="btnNovo" onclick="reiniciar()">Jogar novamente</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
