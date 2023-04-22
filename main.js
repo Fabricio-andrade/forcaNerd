@@ -28,6 +28,26 @@ function atualizarJogo() {
     checagem();
 }
 
+function mostrarLetrasCertas() {
+    const divSecreta = document.querySelector(".secretaContainer");
+    divSecreta.innerHTML = "";
+    palavraSecreta.split("").forEach(letra => {
+        if (letrasCertas.includes(letra)) {
+            divSecreta.innerHTML += `<span>${letra}</span>`;
+        } else {
+            divSecreta.innerHTML += `<span>_</span>`;
+        }
+    })
+}
+
+function mostrarLetrasErradas() {
+    const divErradas = document.querySelector(".erradasContainer");
+    divErradas.innerHTML = "<h3>Letras Erradas</h3>";
+    letrasErradas.forEach(letra => {
+        divErradas.innerHTML += `<span>${letra}</span>`;
+    });
+}
+
 function avisoRepetida() {
     const aviso = document.querySelector('.avisoRepetida');
     aviso.classList.add('mostrar');
