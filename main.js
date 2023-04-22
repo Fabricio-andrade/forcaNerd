@@ -28,6 +28,13 @@ function atualizarJogo() {
     checagem();
 }
 
+function vidas() {
+    const vidasR = document.querySelectorAll(".vidas");
+    for (let i = 0; i < letrasErradas.length; i++) {
+        vidasR[i].style.display = "none";
+    }
+}
+
 function mostrarLetrasCertas() {
     const divSecreta = document.querySelector(".secretaContainer");
     divSecreta.innerHTML = "";
