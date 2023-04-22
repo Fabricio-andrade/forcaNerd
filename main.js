@@ -28,6 +28,24 @@ function atualizarJogo() {
     checagem();
 }
 
+function checagem() {
+    const divSecreta = document.querySelector(".secretaContainer");
+    const vidasR = document.querySelectorAll(".vidas");
+    let mensagem = ""
+    if(letrasErradas.length === vidasR.length) {
+        mensagem = "Fim de jogo! Você perdeu!";
+    }
+
+    if (palavraSecreta === divSecreta.innerText) {
+        mensagem = "Parabéns! Você ganhou!";
+    }
+
+    if(mensagem) {
+        document.querySelector('#mensagem').innerHTML = mensagem;
+        document.querySelector('.popupContainer').style.display = "flex";
+    }
+}
+
 function vidas() {
     const vidasR = document.querySelectorAll(".vidas");
     for (let i = 0; i < letrasErradas.length; i++) {
