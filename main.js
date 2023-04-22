@@ -1,27 +1,29 @@
-async function listaPalavras() {
-    const response = await fetch('/listaNomes.json');
-    const lista = await response.json();
-    return lista;
-}
+const lista = ["espada", "carro", "livro", "tomada", "arvore", "biblioteca", "copo", "abelha", "alfabeto", "bingo"];
+const palavraSecreta = lista[Math.floor(Math.random() * lista.length)];
+const letrasErradas = [];
+const letrasCertas = [];
 
-listaPalavras().then(lista => {
-    const tamanho = Object.keys(lista.lista).length;
-    const campo = document.getElementById('palavra');
-    let letra = document.getElementById('letra').value;
-    let vidas = 5;
+document.addEventListener('keydown', (digito) => {
+    const codigo = digito.keyCode;
+    if (isLetra(codigo)) {
+        const letra = digito.key;
 
-    function randomSort(a, b) {
-        return Math.random() - 0.5;
-    }
-
-    document.getElementById('gerar').onclick = () => {
-        
-        lista.lista.sort(randomSort);
-        let palavraNova = lista.lista[0].palavra;
-        console.log(palavraNova.length);
-    }
-
-    document.getElementById('confirma').onclick = () => {
-        
+        if (letrasErradas.includes(letra)) {
+            avisoRepetida();
+        } else {
+            if (palavraSecreta.includes(letra)) {
+                letrasCertas.push(letra);
+            } else {
+                letrasErradas.push(letra);
+            }
+        }
+        atualizarJogo();
     }
 })
+
+function atualizarJogo() {
+    mostrarLetrasCertas();
+    mostrarLetrasErradas();
+    vidas();
+    checagem();
+}
