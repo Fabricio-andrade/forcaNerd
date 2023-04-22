@@ -1,0 +1,55 @@
+body {
+    font-size: larger;
+}
+
+.avisoRepetida {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+.Jogo {
+    display: flex;
+}
+
+.forca {
+    display: flex;
+    width: 15vw;
+}
+
+span {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.popupContainer {
+    margin: auto auto;
+    color: white;
+    display: none;
+    background-color: #222222bb;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: #222222;
+    border-radius: 3%;
+    padding: 7%;
+    margin: auto auto;
+}
+#btnNovo {
+    height: 5vh;
+    width: max-content;
+    margin: auto 32%;
+}
+
+span {
+    letter-spacing: 5px;
+}
