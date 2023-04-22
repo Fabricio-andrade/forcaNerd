@@ -28,6 +28,14 @@ function atualizarJogo() {
     checagem();
 }
 
+function avisoRepetida() {
+    const aviso = document.querySelector('.avisoRepetida');
+    aviso.classList.add('mostrar');
+    setTimeout(() => {
+        aviso.classList.remove('mostrar');
+    }, 1000);
+}
+
 function isLetra(codigo) {
     return codigo >= 65 && codigo <= 90;
 }
