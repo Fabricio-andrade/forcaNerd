@@ -2,6 +2,7 @@ const lista = ["espada", "carro", "livro", "tomada", "arvore", "biblioteca", "co
 const palavraSecreta = lista[Math.floor(Math.random() * lista.length)];
 const letrasErradas = [];
 const letrasCertas = [];
+mostrarLetrasCertas();
 
 document.addEventListener('keydown', (digito) => {
     const codigo = digito.keyCode;
@@ -49,7 +50,7 @@ function checagem() {
 function vidas() {
     const vidasR = document.querySelectorAll(".vidas");
     for (let i = 0; i < letrasErradas.length; i++) {
-        vidasR[i].style.display = "none";
+        vidasR[i].style.display = "block";
     }
 }
 
